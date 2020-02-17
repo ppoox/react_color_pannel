@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ColorList from "../components/ColorList";
 import * as colorListActions from "../store/modules/colorList";
-import * as counterAcions from "../store/modules/counter";
+import * as counterActions from "../store/modules/counter";
 import { bindActionCreators } from "redux";
 
 class ColorListContainer extends Component {
   render() {
-    const { input, list, ColorListActions, CounterACtions } = this.props;
+    const { input, list, ColorListActions, CounterActions } = this.props;
     return (
       <ColorList
         input={input}
         list={list}
         ColorListActions={ColorListActions}
-        CounterACtions={CounterACtions}
+        CounterActions={CounterActions}
       />
     );
   }
@@ -26,7 +26,7 @@ const mapStateToProps = ({ colorList }) => ({
 
 const mapDispatchToProps = dispatch => ({
   ColorListActions: bindActionCreators(colorListActions, dispatch),
-  CounterACtions: bindActionCreators(counterAcions, dispatch)
+  CounterActions: bindActionCreators(counterActions, dispatch)
 });
 
 export default connect(

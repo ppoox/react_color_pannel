@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import ColorSquare from "../components/ColorSquare";
 import { connect } from "react-redux";
-import { change_color } from "../store/modules/counter";
+import { changeColor } from "../store/modules/counter";
 
 class ColorSquareContatiner extends Component {
   render() {
-    const { color, number, change_color } = this.props;
+    const { color, number, changeColor } = this.props;
     return (
-      <ColorSquare selected={color} number={number} onSelect={change_color} />
+      <ColorSquare selected={color} number={number} onSelect={changeColor} />
     );
   }
 }
@@ -18,7 +18,7 @@ const mapStateToProps = ({ counter: { color, number } }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  change_color: color => dispatch(change_color(color))
+  changeColor: color => dispatch(changeColor(color))
 });
 
 export default connect(

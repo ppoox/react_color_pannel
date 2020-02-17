@@ -1,9 +1,9 @@
 import { createAction, handleActions } from "redux-actions";
 
 const CHANGE_INPUT = "colorList/CHANGE_INPUT";
-const INSERT = "colorList/INPUT";
+const INSERT = "colorList/INSERT";
 const UPDATE = "colorList/UPDATE";
-const REMOVE = "colorList/REMOVe";
+const REMOVE = "colorList/REMOVE";
 
 let id = 1;
 export const changeInput = createAction(CHANGE_INPUT, text => text);

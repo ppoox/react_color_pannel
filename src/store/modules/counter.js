@@ -11,7 +11,7 @@ const CHANGE_COLOR = "counter/CHANGE_COLOR";
 // export const change_color = color => ({ type: CHANGE_COLOR, color });
 export const increment = createAction(INCREMENT);
 export const decrement = createAction(DECREMENT);
-export const change_color = createAction(CHANGE_COLOR, color => color);
+export const changeColor = createAction(CHANGE_COLOR, color => color);
 
 const initialState = {
   number: 0,
